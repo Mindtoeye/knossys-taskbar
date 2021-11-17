@@ -1,0 +1,10 @@
+
+.ktaskbar {
+  flex: 0;
+  background: grey;
+  min-height: 25px;
+  height: 25px;
+  border: 1px solid #484848;
+  background: #95939357;
+  border-radius: 2px;
+}
