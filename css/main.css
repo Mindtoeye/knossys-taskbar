@@ -27,6 +27,8 @@ html {
 
   font-family: Verdana;
   font-size: 10pt;
+
+  background: black;
 }
 
 *, *:before, *:after {
@@ -41,5 +43,7 @@ body {
   overflow: hidden;
 
   line-height: 2;
+
+  background: black;  
 }
 

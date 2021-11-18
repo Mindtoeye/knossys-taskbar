@@ -1,10 +1,101 @@
 
-.ktaskbar {
-  flex: 0;
+.ktaskbar {  
   background: grey;
-  min-height: 25px;
-  height: 25px;
   border: 1px solid #484848;
   background: #95939357;
   border-radius: 2px;
+  padding: 4px;
+
+  flex: 0;
+  display: flex;
+  flex-direction: row;  
+}
+
+.ktaskbar .ktaskbarmain {
+  position: fixed;
+  bottom: 35px;
+  left: 0px;
+  width: 229px;
+  height: 300px;
+  /*background: #3837378c;*/
+  border: 1px solid #7d7c7c59;
+  border-radius: 5px;
+
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(41,41,41,1) 23%, rgba(255,255,255,0) 86%);
+
+  -webkit-box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 45%);
+  -moz-box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 45%);  
+}
+
+.ktaskbar .ktaskbarmain .ktaskbartitle {
+  color: #cbcbcb;
+  text-align: center;
+  font-size: 8pt;
+  padding: 2px;
+}
+
+.ktaskbar .ktaskbarmain .ktaskbarhsep {
+  height: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #444242;
+  padding: 0px;
+}
+
+.ktaskbar .ktaskbarmain .ktasbarcont {
+  padding: 10px;
+  color: #cbcbcb;
+  font-size: 8pt;
+}
+
+.ktaskbar .kicon {
+  height: 20px;
+  margin: 2px;
+  margin-left: 6px;
+  margin-right: 4px;
+  border: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.ktaskbar .kicon:hover {
+  background: #404040;
+}
+
+.ktaskbar .kvsep {
+  width: 1px;
+  background: #444242;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+.ktaskbar .kstarticon {
+  width: 20px;
+  height: 20px;
+
+  background-image: url('images/logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;    
+}
+
+.ktaskbar .kconsoleicon {
+  width: 20px;
+  height: 20px;
+
+  background-image: url('images/console-32.png');
+  background-repeat: no-repeat;
+  background-size: cover;    
+}
+
+.ktaskbar .kicon .klabel {
+  color: #cbcbcb;
+  font-family: Arial;
+  font-size: 9pt;
+  line-height: 17pt;
+  margin-left: 2px;
 }
