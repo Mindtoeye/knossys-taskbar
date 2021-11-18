@@ -18,12 +18,16 @@ class KTaskbarIcon extends Component {
    * 
    */
   render () {
+    let label;
+
+    if (this.props.showlabel==true) {
+      label=<div className="klabel">{this.props.label}</div>;
+    }
+
     return (<div className="kicon" onClick={this.props.onClick}>
       <div className="kstarticon">          
       </div>
-      <div className="klabel">
-      {this.props.label}
-      </div>
+      {label}
     </div>);
   }
 }
