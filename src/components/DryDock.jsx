@@ -17,7 +17,8 @@ class DryDock extends Component {
     super(props);
 
     this.state={
-      showLabels: true
+      showLabels: true,
+      showInfo: true
     }
 
     this.onKeyDown=this.onKeyDown.bind (this);
@@ -32,13 +33,23 @@ class DryDock extends Component {
     // 'l'
     if(e.keyCode==76) {
       console.log ("Toggling taskbar labels");
-      
+
       let toggle=this.state.showLabels;
       this.setState ({
         showLabels: !toggle
       });
       return;
     }
+
+    // 'i'
+    if(e.keyCode==73) {
+      console.log ("Toggling taskbar info panel");
+      let toggle=this.state.showInfo;
+      this.setState ({
+        showInfo: !toggle
+      });
+      return;      
+    }    
   }  
 
   /**
@@ -51,10 +62,12 @@ class DryDock extends Component {
           <div className="drydockpanel">
             <p>Use the following keys to show and test the various taskbar features</p>
             <p>  l: show/hide labels</p>
-            <p>  m: show/hide main menu</p>
+            <p>  i: show/hide info panel</p>
           </div>
         </div>
-        <KTaskbar showlabels={this.state.showLabels}>
+        <KTaskbar 
+          showlabels={this.state.showLabels}
+          showinfo={this.state.showInfo}>
         </KTaskbar>
       </div>
     );

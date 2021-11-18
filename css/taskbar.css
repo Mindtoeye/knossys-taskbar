@@ -83,8 +83,8 @@
 }
 
 .taskiconimg {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  /*height: 50px;*/
   filter: opacity(0.5);
 }
 
@@ -138,6 +138,18 @@
   margin-left: 2px;
 }
 
+.ktaskbar .kinfopanel {
+  border: 1px inset #4c4c4c;
+  background: #3c3c3c;
+  min-width: 100px;
+  color: #cbcbcb;
+  text-align: center;
+}
+
 .kmenuvstretcher {
+  flex: 1;
+}
+
+.kmenuhstretcher {
   flex: 1;
 }

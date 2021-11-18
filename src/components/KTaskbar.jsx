@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import KTaskbarMain from './KTaskbarMain';
 import KTaskbarIcon from './KTaskbarIcon';
 import KTaskbarSeparator from './KTaskbarSeparator';
+import KTaskbarInfoPanel from './KTaskbarInfoPanel';
 
 import '../../css/taskbar.css';
 
@@ -47,6 +48,10 @@ class KTaskbar extends Component {
       main=<KTaskbarMain key="key0" onHide={this.onMain} />;
     }
 
+    if (this.props.showinfo==true) {
+      infopanel=<KTaskbarInfoPanel />;
+    }
+
     icons.push (<KTaskbarIcon showlabel={this.props.showlabels} key="icon1" onClick={this.onMain} key="icon1" label="Knossys" />);
     icons.push (<KTaskbarSeparator key="icon2" />);
     icons.push (<KTaskbarIcon showlabel={this.props.showlabels} key="icon3" label="Console" />);
@@ -56,7 +61,8 @@ class KTaskbar extends Component {
     return (<div className="ktaskbar">
       {main}
       {icons}
-      {infopanel}  
+      <div className="kmenuhstretcher" />
+      {infopanel}
     </div>);
   }
 }
